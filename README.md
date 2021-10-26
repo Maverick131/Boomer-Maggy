@@ -1,8 +1,11 @@
 # Boomer-Maggy
 
-The purpose of this program is to electronically filter garbled characters from a Magnetometer data string that's being introduced by a Boomer sub-bottom profiler. 
+The purpose of this script is to electronically filter non alphanumeric characters from a Magnetometer data string before entering acquisition software. The garbled characters are introduced through a Boomer sub-bottom profiler that is being flown in tandem. 
 
 # Usage 
 
-Clone the repoistory on a Raspberry pi, then connect a usb-serial cable to a usb port on the pi.
-
+Clone the repository on a Raspberry Pi
+Assign portOut/portIn to usb ports on the Pi using SYMLINK rules with specified port path.  
+Add start command upon boot in /etc/rc.local file. 
+Connect incoming data stream to portIn
+Connect outgoing data stream to portOut, attach null modem to usb-serial cabl
